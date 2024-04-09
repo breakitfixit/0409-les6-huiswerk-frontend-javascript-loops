@@ -1,6 +1,7 @@
 // ==========================================
 // Opdracht 1a
-// Schrijf een script dat voor iedere student in de array de score (het getal uit de property "score") in de terminal print
+// Schrijf een script dat voor iedere student in de array de score
+// (het getal uit de property "score") in de terminal print
 
 const scores = [
     {name: 'Max', score: 83, grade: null},
@@ -17,6 +18,9 @@ const scores = [
 // ==========================================
 
 
+// for (let i = 0; i < scores.length; i++) {
+//     console.log(scores[i].score);
+// }
 
 
 
@@ -32,8 +36,25 @@ const scores = [
 // D
 // ==========================================
 
+// input <60 = D / <70 = D(etc)
+// output = nieuwe waarde aan de hand van score weergeven = letterGrade
 
+for (let i = 0; i < scores.length; i++) {
+    let letterGrade = '';
 
+    if (scores[i].score < 60) {
+        letterGrade = "F";
+    } else if (scores[i].score < 70) {
+        letterGrade = "D";
+    } else if (scores[i].score < 80) {
+        letterGrade = "C";
+    } else if (scores[i].score < 90) {
+        letterGrade = "B";
+    } else if (scores[i].score <= 100) {
+        letterGrade = "A";
+    }
+    console.log(letterGrade)
+}
 
 
 // ==========================================
@@ -48,6 +69,25 @@ const scores = [
 //  { name: 'Rianne', score: 66, grade: 'D' }
 //  ];
 // ==========================================
+
+for (let i = 0; i < scores.length; i++) {
+    let letterGrade = '';
+
+    if (scores[i].score < 60) {
+        scores[i].grade = "F";
+    } else if (scores[i].score < 70) {
+        scores[i].grade = "D";
+    } else if (scores[i].score < 80) {
+        scores[i].grade = "C";
+    } else if (scores[i].score < 90) {
+        scores[i].grade = "B";
+    } else if (scores[i].score <= 100) {
+        scores[i].grade = "A";
+    }
+
+}
+
+console.log(scores)
 
 
 
