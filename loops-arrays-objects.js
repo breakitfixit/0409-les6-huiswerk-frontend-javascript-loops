@@ -84,7 +84,6 @@ for (let i = 0; i < scores.length; i++) {
     } else if (scores[i].score <= 100) {
         scores[i].grade = "A";
     }
-
 }
 
 console.log(scores)
@@ -115,6 +114,13 @@ const NOVIEmployees = [
 //  ];
 // ==========================================
 
+for (let i = 0; i < NOVIEmployees.length; i++) {
+    // NOVIEmployees[i].email = NOVIEmployees[i].firstName + "." + NOVIEmployees[i].lastName + "@novi.nl";
+    NOVIEmployees[i].email = (NOVIEmployees[i].firstName + "." + NOVIEmployees[i].lastName + "@novi.nl").toLowerCase(); // aanpassing bedacht zodat emailadressen worden weergegeven in kleine letters
+}
+
+console.log(NOVIEmployees)
+
 
 
 
@@ -124,6 +130,7 @@ const NOVIEmployees = [
 // Lukt het je om ervoor te zorgen dat alle e-mailadressen in lowercase letters komen te staan? Dit heb je nog niet geleerd, maar google is your best friend...
 // ==========================================
 
+// ha is gelukt, toevallig had ik dit er zelf ook bijverzonnen in opdracht 2.
 
 
 
